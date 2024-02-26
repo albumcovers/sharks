@@ -1,0 +1,110 @@
+html {
+    background: black;
+    font-family: 'inter';
+    color: white;
+}
+
+.nav-container {
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0;
+    margin: 0;
+}
+
+.hero {
+    margin-top: 90px;
+    padding: 40px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 75px;
+}
+
+.special {
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,111,0,1) 12%, rgba(255,252,0,1) 26%, rgba(5,255,0,1) 39%, rgba(0,201,255,1) 51%, rgba(128,0,255,1) 64%, rgba(255,0,236,1) 77%, rgba(255,0,0,1) 100%);
+    -webkit-animation: Animation 5s ease infinite;
+    -moz-animation: Animation 5s ease infinite;
+    animation: Animation 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+}
+
+@-webkit-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes Animation { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+
+button {
+    --color: #86BA90;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    background: #000;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+   }
+   
+   button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+   button:hover {
+    color: #fff;
+   }
+   
+   button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   button:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   button:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+   }
